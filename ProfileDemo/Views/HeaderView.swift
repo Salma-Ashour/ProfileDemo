@@ -27,6 +27,18 @@ class HeaderView: UITableViewHeaderFooterView {
 
         userCardView.layer.cornerRadius = 30
         userCardView.layer.masksToBounds = true
+
+        userStatusView.layer.cornerRadius = 6.5
+        userStatusView.layer.masksToBounds = true
+
+        requestButton.layer.cornerRadius = 12
+        requestButton.layer.masksToBounds = true
+
+        userCardView.layer.shadowColor = UIColor.black.cgColor
+        userCardView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        userCardView.layer.shadowRadius = 10
+        userCardView.layer.shadowOpacity = 0.16
+        userCardView.layer.masksToBounds = false
         
     }
 
@@ -34,5 +46,13 @@ class HeaderView: UITableViewHeaderFooterView {
         usernameLabel.text = user.name
         userCountry.text = user.country
         userJob.text = user.job
+    }
+
+    func addingShadow(size: CGSize, radius: CGFloat, opacity: Float) {
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = size
+        layer.shadowRadius = radius
+        layer.shadowOpacity = opacity
+        layer.masksToBounds = false
     }
 }
