@@ -1,0 +1,39 @@
+{
+    "name": "Amira Hassan",
+    "job": "Cleaner",
+    "country": "Medina",
+    "status": "Online",
+    "rate": 4.5,
+    "reviews": [
+        {
+            "reviewerName": "Salma Ashour",
+            "reviewerRate": 4.0,
+            "date": "13.5.2020",
+            "description": "A very good cleaner. will recommend you to my friends."
+        },
+        {
+            "reviewerName": "Fatma Rahim",
+            "reviewerRate": 4.0,
+            "date": "23.5.2020",
+            "description": "222222"
+        },
+        {
+            "reviewerName": "Nayra Sayed",
+            "reviewerRate": 4.0,
+            "date": "30.5.2020",
+            "description": "33333"
+        },
+        {
+            "reviewerName": "Norhan Samir",
+            "reviewerRate": 4.0,
+            "date": "15.6.2020",
+            "description": "44444"
+        },
+        {
+            "reviewerName": "Nesma Ashour",
+            "reviewerRate": 4.0,
+            "date": "16.7.2020",
+            "description": "555555"
+        }
+    ]
+}

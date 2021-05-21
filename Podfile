@@ -8,5 +8,6 @@ target 'ProfileDemo' do
   # Pods for ProfileDemo
 
 pod 'ParallaxHeader', '~> 3.0.0'
+pod 'Alamofire', '~> 5.2'
 
 end
