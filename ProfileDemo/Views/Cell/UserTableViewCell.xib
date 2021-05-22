@@ -86,7 +86,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_stars" width="467" height="108"/>
+        <image name="ic_stars" width="3000" height="700"/>
         <image name="ic_user" width="500" height="749"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

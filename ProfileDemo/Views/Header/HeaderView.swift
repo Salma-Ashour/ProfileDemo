@@ -55,4 +55,10 @@ class HeaderView: UITableViewHeaderFooterView {
         layer.shadowOpacity = opacity
         layer.masksToBounds = false
     }
+
+    @IBAction func reguestButtonClicked(_ sender: Any) {
+        requestButton.setTitle("Request Sent ✅", for: .normal)
+        requestButton.backgroundColor = .gray
+    }
+    
 }

@@ -46,7 +46,7 @@ extension ProfileViewController: UITableViewDelegate {
     }
 
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            return 400
+            return 500
         }
 
 }
