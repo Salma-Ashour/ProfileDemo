@@ -9,8 +9,9 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    var userCellID = "UserTableViewCell"
     var user: User?
+    var profileVM: ProfileViewModel?
+    var userCellID = "UserTableViewCell"
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -25,31 +26,12 @@ class ProfileViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
-        fetchUserData { (user, error) in
+        profileVM = ProfileViewModel()
+        profileVM?.fetchUserData { (user, error) in
             self.user = user
             self.tableView.reloadData()
         }
-
     }
-
-    func fetchUserData(completion: @escaping (User?, Error?) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) { [weak self] in
-            guard self != nil else { return }
-            if let path = Bundle.main.url(
-                forResource: "user_profile",
-                withExtension: "json") {
-                do {
-                    let data = try Data(contentsOf: path, options: .mappedIfSafe)
-                    let decoder = JSONDecoder()
-                    let userModel = try decoder.decode(User.self, from: data)
-                    completion(userModel, nil)
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-        }
-    }
-
 }
 
 extension ProfileViewController: UITableViewDelegate {
@@ -85,12 +67,5 @@ extension ProfileViewController: UITableViewDataSource {
                 review: review[indexPath.row])
         }
         return cell
-    }
-}
-
-
-extension UIView {
-    public class func loadXib<T: UIView>(bundle: Bundle = Bundle.main, nibName: String = String("\(T.self)")) -> T? {
-        return bundle.loadNibNamed(nibName, owner: self, options: nil)?.first as? T
     }
 }

@@ -18,15 +18,10 @@ class UserTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
+    
     func configure(review: Review) {
         self.ReviewerNameLabel.text = review.reviewerName
         self.dateLabel.text = review.date
         self.descriptionLabel.text = review.description
     }
-
 }

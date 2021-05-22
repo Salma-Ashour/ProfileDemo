@@ -21,6 +21,8 @@
 		4CB73C6726584A1E0076E91A /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB73C6626584A1E0076E91A /* UserTableViewCell.swift */; };
 		4CB73C6E2658542B0076E91A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB73C6D2658542B0076E91A /* User.swift */; };
 		4CB73C75265859350076E91A /* user_profile.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CB73C74265859350076E91A /* user_profile.json */; };
+		4CB73C7F265936E30076E91A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB73C7E265936E30076E91A /* ProfileViewModel.swift */; };
+		4CB73C84265938260076E91A /* UIView+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB73C83265938260076E91A /* UIView+XIB.swift */; };
 		7F4BA1D29B9B7825E7D257D6 /* Pods_ProfileDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E944FC6A8720F243AB3F409B /* Pods_ProfileDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		4CB73C6626584A1E0076E91A /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		4CB73C6D2658542B0076E91A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4CB73C74265859350076E91A /* user_profile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_profile.json; sourceTree = "<group>"; };
+		4CB73C7E265936E30076E91A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		4CB73C83265938260076E91A /* UIView+XIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+XIB.swift"; sourceTree = "<group>"; };
 		690F083017B954838EF34DF3 /* Pods-ProfileDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProfileDemo.debug.xcconfig"; path = "Target Support Files/Pods-ProfileDemo/Pods-ProfileDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E944FC6A8720F243AB3F409B /* Pods_ProfileDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProfileDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB96BD099F138FB031B4D965 /* Pods-ProfileDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProfileDemo.release.xcconfig"; path = "Target Support Files/Pods-ProfileDemo/Pods-ProfileDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,17 +92,16 @@
 		4CB73C222657FE3C0076E91A /* ProfileDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4CB73C86265938670076E91A /* ViewModel */,
+				4CB73C7A2659363E0076E91A /* Model */,
 				4CB73C61265835E60076E91A /* Views */,
+				4CB73C822659380F0076E91A /* Extensions */,
 				4CB73C232657FE3C0076E91A /* AppDelegate.swift */,
 				4CB73C252657FE3C0076E91A /* SceneDelegate.swift */,
-				4CB73C272657FE3C0076E91A /* ProfileViewController.swift */,
 				4CB73C292657FE3C0076E91A /* Main.storyboard */,
-				4CB73C2C2657FE3D0076E91A /* Assets.xcassets */,
 				4CB73C2E2657FE3D0076E91A /* LaunchScreen.storyboard */,
 				4CB73C312657FE3D0076E91A /* Info.plist */,
-				4CB73C40265803C10076E91A /* ReportView.xib */,
-				4CB73C43265805780076E91A /* UserCardView.xib */,
-				4CB73C6D2658542B0076E91A /* User.swift */,
+				4CB73C2C2657FE3D0076E91A /* Assets.xcassets */,
 				4CB73C74265859350076E91A /* user_profile.json */,
 			);
 			path = ProfileDemo;
@@ -107,12 +110,63 @@
 		4CB73C61265835E60076E91A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4CB73C392658013F0076E91A /* HeaderView.xib */,
-				4CB73C5E265833B70076E91A /* HeaderView.swift */,
-				4CB73C6626584A1E0076E91A /* UserTableViewCell.swift */,
-				4CB73C46265817860076E91A /* UserTableViewCell.xib */,
+				4CB73C7D2659369A0076E91A /* Controller */,
+				4CB73C79265936060076E91A /* Cell */,
+				4CB73C78265935F20076E91A /* Header */,
+				4CB73C43265805780076E91A /* UserCardView.xib */,
+				4CB73C40265803C10076E91A /* ReportView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4CB73C78265935F20076E91A /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				4CB73C5E265833B70076E91A /* HeaderView.swift */,
+				4CB73C392658013F0076E91A /* HeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		4CB73C79265936060076E91A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4CB73C46265817860076E91A /* UserTableViewCell.xib */,
+				4CB73C6626584A1E0076E91A /* UserTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4CB73C7A2659363E0076E91A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CB73C6D2658542B0076E91A /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4CB73C7D2659369A0076E91A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4CB73C272657FE3C0076E91A /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4CB73C822659380F0076E91A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4CB73C83265938260076E91A /* UIView+XIB.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4CB73C86265938670076E91A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CB73C7E265936E30076E91A /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		59539BD960F16335DA4BF17B /* Frameworks */ = {
@@ -244,10 +298,12 @@
 			files = (
 				4CB73C282657FE3C0076E91A /* ProfileViewController.swift in Sources */,
 				4CB73C242657FE3C0076E91A /* AppDelegate.swift in Sources */,
+				4CB73C84265938260076E91A /* UIView+XIB.swift in Sources */,
 				4CB73C6E2658542B0076E91A /* User.swift in Sources */,
 				4CB73C262657FE3C0076E91A /* SceneDelegate.swift in Sources */,
 				4CB73C5F265833B70076E91A /* HeaderView.swift in Sources */,
 				4CB73C6726584A1E0076E91A /* UserTableViewCell.swift in Sources */,
+				4CB73C7F265936E30076E91A /* ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
