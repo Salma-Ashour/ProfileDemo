@@ -18,6 +18,7 @@ class HeaderView: UITableViewHeaderFooterView {
     @IBOutlet weak var userRateView: UIView!
     @IBOutlet weak var requestButton: UIButton!
     
+    @IBOutlet weak var dotsIcon: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,4 +62,45 @@ class HeaderView: UITableViewHeaderFooterView {
         requestButton.backgroundColor = .gray
     }
     
+    @IBAction func dotsIconPressed(_ sender: Any) {
+        if let reportCard: ReportView  = ReportView.loadXib(
+            nibName: "ReportView") as? ReportView {
+
+        self.addSubview(reportCard)
+
+        reportCard.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint(
+            item: reportCard,
+            attribute: .height,
+            relatedBy: .equal,
+            toItem: nil,
+            attribute: .height,
+            multiplier: 1,
+            constant: 100).isActive = true
+        NSLayoutConstraint(
+            item: reportCard,
+            attribute: .width,
+            relatedBy: .equal,
+            toItem: nil,
+            attribute: .width,
+            multiplier: 1,
+            constant: 150).isActive = true
+        NSLayoutConstraint(
+            item: reportCard,
+            attribute: .top,
+            relatedBy: .equal,
+            toItem: dotsIcon,
+            attribute: .bottom,
+            multiplier: 1,
+            constant: 0).isActive = true
+        NSLayoutConstraint(
+            item: reportCard,
+            attribute: .trailing,
+            relatedBy: .equal,
+            toItem: dotsIcon,
+            attribute: .leading,
+            multiplier: 1,
+            constant: 0).isActive = true
+        }
+}
 }

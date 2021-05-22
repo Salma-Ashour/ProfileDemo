@@ -27,6 +27,9 @@
                         <constraint firstAttribute="height" constant="44" id="ygM-gF-iNL"/>
                     </constraints>
                     <state key="normal" image="ic_dots"/>
+                    <connections>
+                        <action selector="dotsIconPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="iCW-do-S1K"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRq-gh-KkG">
                     <rect key="frame" x="32" y="250" width="350" height="220"/>
@@ -169,6 +172,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="dotsIcon" destination="EYl-4N-DrB" id="iYI-OD-PAi"/>
                 <outlet property="profileImageView" destination="ma0-uz-F9T" id="eEn-Nv-MTh"/>
                 <outlet property="requestButton" destination="VT2-XU-2HF" id="CyM-fa-NiF"/>
                 <outlet property="userCardView" destination="yRq-gh-KkG" id="UMx-L7-iUh"/>

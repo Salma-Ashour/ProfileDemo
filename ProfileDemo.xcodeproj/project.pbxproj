@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2F5A69265947B400C4EC5A /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F5A68265947B400C4EC5A /* ReportView.swift */; };
 		4CB73C242657FE3C0076E91A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB73C232657FE3C0076E91A /* AppDelegate.swift */; };
 		4CB73C262657FE3C0076E91A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB73C252657FE3C0076E91A /* SceneDelegate.swift */; };
 		4CB73C282657FE3C0076E91A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB73C272657FE3C0076E91A /* ProfileViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C2F5A68265947B400C4EC5A /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		4CB73C202657FE3C0076E91A /* ProfileDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB73C232657FE3C0076E91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CB73C252657FE3C0076E91A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				4CB73C78265935F20076E91A /* Header */,
 				4CB73C43265805780076E91A /* UserCardView.xib */,
 				4CB73C40265803C10076E91A /* ReportView.xib */,
+				4C2F5A68265947B400C4EC5A /* ReportView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				4CB73C84265938260076E91A /* UIView+XIB.swift in Sources */,
 				4CB73C6E2658542B0076E91A /* User.swift in Sources */,
 				4CB73C262657FE3C0076E91A /* SceneDelegate.swift in Sources */,
+				4C2F5A69265947B400C4EC5A /* ReportView.swift in Sources */,
 				4CB73C5F265833B70076E91A /* HeaderView.swift in Sources */,
 				4CB73C6726584A1E0076E91A /* UserTableViewCell.swift in Sources */,
 				4CB73C7F265936E30076E91A /* ProfileViewModel.swift in Sources */,
